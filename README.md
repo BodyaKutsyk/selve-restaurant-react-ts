@@ -1,3 +1,3 @@
-# **React+ts**
+# **Selve Restaurant**
 
-### This is my first template
+###  This is a new React app that uses TypeScript
