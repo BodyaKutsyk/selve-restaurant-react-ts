@@ -8,6 +8,7 @@ import { Home } from './modules/components/Home';
 import { Menu } from './modules/components/shared/Menu';
 import { Navigation } from './modules/components/Navigation';
 import { useState, useEffect } from 'react';
+import { NotFound } from './modules/components/NotFound';
 
 export const App = () => {
   const [isNavOpem, setIsNavOpen] = useState(false);
@@ -27,6 +28,7 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path="menu" element={<Menu isSearchEnabled={true} />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
 import { ContactIcons } from '../shared/ContactIcons/ContactIcons';
 
@@ -37,9 +37,9 @@ export const Header: React.FC<Props> = ({ setIsNavOpen }) => {
             </NavLink>
           </li>
           <li className="header__elem">
-            <a href="#footer" className="header__link">
+            <Link to="#footer" className="header__link">
               Contacts
-            </a>
+            </Link>
           </li>
           <li className="header__elem">
             <ContactIcons gap={20} />
