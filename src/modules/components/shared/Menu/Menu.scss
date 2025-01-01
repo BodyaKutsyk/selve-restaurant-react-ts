@@ -1,0 +1,120 @@
+@import './../../../utils/resources';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+
+  @include onDesktop {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  &--page {
+    padding-top: 40px;
+
+    @include onDesktop {
+      padding-top: 50px;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+
+    @include underLine;
+  }
+
+  &__controls {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    
+    border-radius: 3px;
+    box-shadow: 0 1px 4px 0 #0000004D inset;
+
+    &-wrapper {
+      width: 100%;
+      padding-inline: 10px;
+    }
+  }
+
+  &__search {
+    padding: 0;
+    padding-left: 16px;
+    width: 80%;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__btn {
+    position: relative;
+    width: 20%;
+    color: $dark-gray;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin: auto 0;
+      left: 0;
+
+      width: 1px;
+      height: 18px;
+      background-color: $orange;
+    }
+  }
+
+  &__dishes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & :nth-child(even) {
+      direction: rtl
+    }
+
+    @include onDesktop {
+      gap: 35px
+    }
+
+    & article {
+      @include onDesktop {
+        @include pageGrid;
+
+        & .dish__image {
+          grid-column: span 3;
+          order: -1;
+        }
+
+        & div {
+          grid-column: span 3;
+
+          & p {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+  
+  &__more {
+    margin-bottom: 37px;
+
+    height: 36px;
+    width: 200px;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    background-color: transparent;
+    text-transform: uppercase;
+
+    font-family: Roboto, sans-serif;
+    line-height: 16.41px;
+
+    @include onDesktop {
+      width: 256px;
+    }
+  }
+}
