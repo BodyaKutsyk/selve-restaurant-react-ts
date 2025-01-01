@@ -77,15 +77,12 @@
   }
 
   &__description {
+    padding-inline: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 360px;
-    height: 65px;
-    padding-inline: 10px;
-
-    @include onDesktop {
-      max-width: 540px;
-    }
   }
 }
 

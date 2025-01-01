@@ -32,7 +32,7 @@ export const Header: React.FC<Props> = ({ setIsNavOpen }) => {
             </NavLink>
           </li>
           <li className="header__logo">
-            <NavLink to="/" className="header__link">
+            <NavLink to="/home" className="header__link">
               <h1>Selve Restaurant</h1>
             </NavLink>
           </li>
