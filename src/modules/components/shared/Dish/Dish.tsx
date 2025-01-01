@@ -27,7 +27,7 @@ export const Dish: React.FC<Props> = ({
     >
       <div className="dish__info">
         <h3 className="dish__title">{strMeal}</h3>
-        <img src="img/pasta.png" alt="Dish logo" className="dish__info-img" />
+        <img src={strMealThumb} alt="Dish logo" className="dish__info-img" />
         <p className="dish__description">{strInstructions}</p>
       </div>
       <div className="dish__image">
