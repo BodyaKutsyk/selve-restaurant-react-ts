@@ -1,0 +1,16 @@
+@import './../../../utils/resources';
+
+.contact-icon {
+  display: flex;
+
+  & a {
+    display: flex;
+  }
+
+  cursor: pointer;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    scale: 1.1 !important;
+  }
+}

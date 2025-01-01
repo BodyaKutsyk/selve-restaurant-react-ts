@@ -1,0 +1,86 @@
+@import '../../../utils/resources';
+
+.dish {
+  padding-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+
+  @include underLine;
+
+  @include onDesktop {
+    padding-bottom: 35px;
+  }
+
+  &--loading {
+    .dish__image, p, h3 {
+      color: transparent;
+      background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+      border-radius: 5px;
+      background-size: 200% 100%;
+      animation: 1.5s shine linear infinite;
+    }
+    img {
+      filter: blur(3px) grayscale(90%);
+    }
+  }
+  &-img {
+    display: none;
+    max-height: 274px;
+    width: 540px;
+    object-fit: cover;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &::after {
+    width: calc(100% - 20px);
+  }
+
+  &--last {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include onDesktop {
+      & h3 {
+        font-size: 45px;
+      }
+
+      & p {
+        line-height: 16.41px;
+        font-size: 14px;
+      }
+
+    }
+
+    &-img {
+      width: 100%;
+      
+      @include onDesktop {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    padding-inline: 10px;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

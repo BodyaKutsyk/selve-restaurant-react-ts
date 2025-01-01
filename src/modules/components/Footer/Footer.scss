@@ -1,0 +1,140 @@
+@import './../../utils/resources';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $gray;
+
+  @include underLine;
+
+  &::after {
+    top: 0;  
+    width: 100%;
+  }
+
+  @include onDesktop {
+    background-color: transparent;
+  }
+
+  & section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    @include onDesktop {
+      gap: 20px;
+    }
+
+    & h3 {
+      width: fit-content;
+      
+      @include underLine;
+
+      @include onDesktop {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__hours h3::after {
+    width: 110% !important;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    @include onDesktop {
+      gap: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__top {
+    @include pageGrid;
+
+    gap: 30px;
+    padding: 10px 56px 26px;
+    width: 100%;
+
+  
+
+    & > section {
+      @include onDesktop {
+        grid-column: span 2;
+      }
+    }
+
+    @include onDesktop {
+      padding-inline: 0;
+      padding-block: 26px 40px;
+      max-width: 1000px;
+
+      &::after {
+        top: 0;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: flex-start !important;
+
+    text-align: start;
+    
+    @include onDesktop {
+      order: 1;
+
+      @include underLine;
+
+      &::after {
+        left: auto;
+        right: -10%;
+        height: 100%;
+        width: 1px;
+      }
+    }
+  }
+
+  &__hours {
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      order: 2;
+      
+      @include underLine;
+
+      &::after {
+        left: auto;
+        right: -10%;
+        height: 100%;
+        width: 1px;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: flex-end !important;
+
+    text-align: end;
+
+    @include onDesktop {
+      order: 3;
+    }
+  }
+
+  &__location, &__socials {
+    grid-column: span 2;
+  }
+
+  &__bottom {
+    padding: 20px;
+  }
+}

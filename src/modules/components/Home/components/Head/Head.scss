@@ -1,0 +1,41 @@
+@import './../../../../utils/resources';
+
+.head {
+  height: calc(100vh - 80px);
+  background: url('./../../../../../../public/img/main.png');
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: calc(40vh - 80px);
+  }
+
+  &__title {
+    color: $white;
+
+    @include onDesktop {
+      font-size: 64px;
+      line-height: 80px;
+    }
+  }
+  
+  &__subtitle {
+    color: $white;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 16.41px;
+
+    @include onDesktop {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

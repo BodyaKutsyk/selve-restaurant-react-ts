@@ -1,0 +1,12 @@
+@import './../../utils/resources';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow: hidden;
+
+  @include onDesktop {
+    gap: 150px;
+  }
+}

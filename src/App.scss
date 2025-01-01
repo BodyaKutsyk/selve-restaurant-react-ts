@@ -1,10 +1,73 @@
-// body {
-//   background-color: #c9d5da;
-// }
+@import './modules/utils/resources';
+@import './modules/utils/fonts';
 
-// .App {
-//   &__title {
-//     font-family: sans-serif;
-//     color: rgb(130, 67, 239);
-//   }
-// }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+  color: $black;
+  background-color: $white;
+}
+
+h1, h2, h3, h4, p, a, button, ul, li, s {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: $black;
+  list-style: none;
+  text-decoration: none;
+}
+
+body:has(.navigation--open) {
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+iframe {
+  display: none;
+}
+
+h1, h2, h3 {
+  font-family: Italianno, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 43.75px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+p {
+  line-height: 12.89px;
+}
+
+button {
+  cursor: pointer;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    scale: 1.1 !important;
+  }
+}
